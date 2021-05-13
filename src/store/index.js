@@ -21,8 +21,8 @@ const langEN = {
 const langBG = {
   filters: {
     filters: 'ФИЛТРИ',
-    all: 'Всички',
-    realised: 'Реализирани',
+    all: 'ВСИЧКИ',
+    realised: 'РЕАЛИЗИРАНИ',
   },
   pageInfo: {
     about: ['ЗА ФИРМАТА'],
@@ -30,8 +30,8 @@ const langBG = {
     contacts: ['ИНФОРМАЦИЯ ЗА КОНТАКТИ'],
   }
 }
-const navbarNamesEn = ["About", "Projects", "Contacts",]
-const navbarNamesBG = ["За нас", "Проекти", "Контакти",]
+const navbarNamesEn = ["about", "projects", "contacts",]
+const navbarNamesBG = ["за нас", "проекти", "контакти",]
 
 Vue.use(Vuex)
 

@@ -2,19 +2,19 @@
   <div class="footer d-flex jc-sb">
     <div v-if="!this.$store.state.inProjects"></div>
     <div v-else>
-      <button @click="toggleFilter" class="main-text-color">
-        {{ this.$store.state.language.filters.filters }}:&nbsp;
-      </button>
+      <span class="filter main-text-color">
+        {{ this.$store.state.language.filters.filters }}:
+      </span>
       <button
         @click="toggleFilter"
-        :class="isFilterAll ? 'main-text-color' : 'main-text-color-darker'"
+        :class="isFilterAll ? 'main-text-color-darker' : 'main-text-color'"
       >
         {{ this.$store.state.language.filters.all }}
       </button>
       <span class="main-text-color">&nbsp;/&nbsp;</span>
       <button
         @click="toggleFilter"
-        :class="!isFilterAll ? 'main-text-color' : 'main-text-color-darker'"
+        :class="!isFilterAll ? 'main-text-color-darker' : 'main-text-color'"
       >
         {{ this.$store.state.language.filters.realised }}
       </button>
@@ -24,8 +24,8 @@
         @click="toggleLanguage"
         :class="
           this.$store.state.activeLanguage === this.$store.state.langBgStr
-            ? 'main-text-color'
-            : 'main-text-color-darker'
+            ? 'main-text-color-darker'
+            : 'main-text-color'
         "
       >
         {{ this.$store.state.langBgStr }}
@@ -35,8 +35,8 @@
         @click="toggleLanguage"
         :class="
           this.$store.state.activeLanguage === this.$store.state.langEnStr
-            ? 'main-text-color'
-            : 'main-text-color-darker'
+            ? 'main-text-color-darker'
+            : 'main-text-color'
         "
       >
         {{ this.$store.state.langEnStr }}
@@ -69,13 +69,14 @@ export default {
 
 <style scoped lang="scss">
 .footer {
-  // height: fit-content;
-  margin-bottom: 100px;
-  // margin: 0.5% 0;
+  margin: 5px 0 100px 0;
+  font-size: 15px;
   button {
+    font-size: 15px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+    padding: 0;
   }
 }
 </style>

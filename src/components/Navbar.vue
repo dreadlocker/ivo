@@ -39,7 +39,7 @@ export default {
 $number-of-tabs: 3;
 // $tab-height: calc(100% / #{$number-of-tabs});
 $tab-height: 169px;
-$padding: 10px;
+$padding: 20px;
 
 .navbar {
   width: $navbar-width;
@@ -59,7 +59,7 @@ $padding: 10px;
       .link {
         width: calc(100% - #{$padding});
         height: calc(100% - #{$padding});
-        font-size: 40px;
+        font-size: 33px;
         padding: $padding 0 0 $padding;
         text-decoration: none;
         &:hover {

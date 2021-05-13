@@ -33,5 +33,10 @@ export default {
 
 .d-flex {
   height: $nav-height;
+  h1 {
+    width: $content-right-width;
+    background-color: gray;
+    margin: 0;
+  }
 }
 </style>
