@@ -21,7 +21,7 @@
     </div>
     <div>
       <button
-        @click="toggleLanguage"
+        @click="changeLanguageToBg"
         :class="
           this.$store.state.activeLanguage === this.$store.state.langBgStr
             ? 'main-text-color-darker'
@@ -32,7 +32,7 @@
       </button>
       <span class="main-text-color">&nbsp;/&nbsp;</span>
       <button
-        @click="toggleLanguage"
+        @click="changeLanguageToEn"
         :class="
           this.$store.state.activeLanguage === this.$store.state.langEnStr
             ? 'main-text-color-darker'
@@ -60,8 +60,11 @@ export default {
       // TODO: da dobavq logika za smenqne na koi proekt se vijda
       this.isFilterAll = !this.isFilterAll;
     },
-    toggleLanguage: function () {
-      this.$store.commit("changeLanguage");
+    changeLanguageToBg: function () {
+      this.$store.commit("changeLanguageToBg");
+    },
+    changeLanguageToEn: function () {
+      this.$store.commit("changeLanguageToEn");
     },
   },
 };
