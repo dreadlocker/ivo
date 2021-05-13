@@ -1,3 +1,5 @@
+@import "@/assets/globalVars.scss";
+
 .main-text-color{
   color: #979797;
 }
@@ -16,6 +18,9 @@
 .ai-c{
   align-items: center;
 }
+.ai-fe{
+  align-items: flex-end;
+}
 .main-bg-color{
   background-color: #3d3d3d;
 }
@@ -23,6 +28,6 @@
   background-color: #6c6c6c;
 }
 .info {
-  width: 20%;
-  margin-right: 1%;
+  width: $content-width;
+  margin-right: $gutter;
 }

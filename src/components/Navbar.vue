@@ -27,6 +27,7 @@ export default {
   methods: {
     changeActivetab(index) {
       this.$store.commit("changeActivetab", index);
+      this.$store.commit("rerunLogoAnimation");
     },
   },
 };
@@ -36,19 +37,20 @@ export default {
 @import "@/assets/globalVars.scss";
 
 $number-of-tabs: 3;
-$tab-height: calc(100% / #{$number-of-tabs});
+// $tab-height: calc(100% / #{$number-of-tabs});
+$tab-height: 169px;
 $padding: 10px;
 
 .navbar {
-  width: $nav-width;
-  height: 100%;
+  width: $navbar-width;
+  height: $nav-height;
   margin-right: $gutter;
   .tabs-holder {
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     flex-direction: column;
     .tab-holder {
-      width: 100%;
+      // width: 100%;
       height: $tab-height;
       margin-bottom: $gutter;
       &:last-child {
@@ -57,10 +59,11 @@ $padding: 10px;
       .link {
         width: calc(100% - #{$padding});
         height: calc(100% - #{$padding});
+        font-size: 40px;
         padding: $padding 0 0 $padding;
         text-decoration: none;
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.05);
         }
         transition: all 0.3s;
       }

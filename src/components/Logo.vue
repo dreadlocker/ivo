@@ -1,38 +1,48 @@
 <template>
-  <div @click="goToHomePage" class="logo"></div>
+  <div class="logo-holder d-flex ai-fe">
+    <div
+      @click="goToHomePage"
+      :class="[
+        'logo',
+        this.$store.state.runLogoAnimation ? 'logo-animation' : '',
+      ]"
+    ></div>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Logo",
   data() {
-    return {
-      url: this.$route,
-    };
+    return {};
   },
   methods: {
     goToHomePage: function () {
       this.$store.commit("changeActivetab");
-      this.$router.push("/");
+      this.$store.commit("rerunLogoAnimation");
+      if (this.$route.fullPath !== "/") {
+        this.$router.push("/");
+      }
     },
   },
-  mounted() {
-    // console.log(this.url);
-  },
-  // watch:{
-
-  // }
 };
 </script>
 
 <style scoped lang="scss">
-.logo {
-  width: 469px;
-  height: 67px;
-  margin: 1% 0;
-  cursor: pointer;
-  background: url("../assets/logo.png") no-repeat;
-  animation: changeImages 1s forwards 1s;
+@import "@/assets/globalVars.scss";
+
+.logo-holder {
+  width: $navbar-width;
+  height: 100px;
+  .logo {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    background: url("../assets/logo.png") no-repeat;
+  }
+  .logo-animation {
+    animation: changeImages 1s forwards 1s;
+  }
 }
 
 @keyframes changeImages {

@@ -20,8 +20,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/globalVars.scss";
+
 .top-content {
-  width: 100%;
-  height: 100%;
+  margin: $gutter 0;
+  // width: 100%;
+  // height: 100%;
 }
 </style>

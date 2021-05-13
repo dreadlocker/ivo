@@ -19,7 +19,7 @@ export default {
 
 <style scoped lang="scss">
 .bottom-content {
-  height: 25%;
+  height: 185px;
   overflow-y: hidden;
   img {
     width: 150%;

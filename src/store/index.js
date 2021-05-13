@@ -47,6 +47,7 @@ const store = new Vuex.Store({
       { name: navbarNamesEn[1], path: projects, active: false },
       { name: navbarNamesEn[2], path: contacts, active: false },
     ],
+    runLogoAnimation: false,
   },
   mutations: {
     showProjectFilters (state) {
@@ -68,6 +69,12 @@ const store = new Vuex.Store({
     },
     changeActivetab (state, index) {
       state.navbar.forEach((tab, idx) => { index === idx ? tab.active = true : tab.active = false })
+    },
+    rerunLogoAnimation (state, index) {
+      state.runLogoAnimation = false;
+      setTimeout(() => {
+        state.runLogoAnimation = true;
+      }, 0);
     },
   }
 })

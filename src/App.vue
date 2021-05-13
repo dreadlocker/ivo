@@ -1,9 +1,9 @@
 <template>
   <div class="app">
     <Logo />
-    <div class="content">
-      <router-view />
-    </div>
+    <!-- <div class="content"> -->
+    <router-view />
+    <!-- </div> -->
     <BottomContent />
     <Footer />
   </div>
@@ -29,25 +29,29 @@ export default {
 @import "@/assets/globalClasses.scss";
 @import "@/assets/globalVars.scss";
 
-$body-margin: 3%;
-
-html,
-.app {
+body {
   width: 100%;
   height: 100%;
-}
-body {
-  width: calc(100% - #{$body-margin * 2});
-  height: calc(100% - #{$body-margin * 2});
-  margin: $body-margin;
+  margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
   background-color: #242424;
 }
 .app {
-  .content {
-    width: inherit;
-    height: 50%;
-    margin: $gutter 0;
-  }
+  width: 1520px; // ORIGINAL, COMMENT ME WHEN DEVELOPING
+  // width: 700px; // FOR DEV
+  height: fit-content;
+
+  // .content {
+  //   // width: inherit;
+  //   // height: 50%;
+  //   margin: $gutter 0;
+  // }
+}
+.app,
+button {
+  font-family: Calibri;
+  // "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif
 }
 </style>

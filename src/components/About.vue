@@ -26,10 +26,6 @@ export default {
 @import "@/assets/globalVars.scss";
 
 .d-flex {
-  width: $content-width;
-  height: 100%;
-  .info {
-    width: $nav-width;
-  }
+  height: $nav-height;
 }
 </style>

@@ -69,8 +69,9 @@ export default {
 
 <style scoped lang="scss">
 .footer {
-  height: fit-content;
-  margin: 0.5% 0;
+  // height: fit-content;
+  margin-bottom: 100px;
+  // margin: 0.5% 0;
   button {
     border: none;
     background-color: transparent;
