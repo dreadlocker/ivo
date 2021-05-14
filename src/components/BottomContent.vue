@@ -1,5 +1,5 @@
 <template>
-  <div class="bottom-content">
+  <div v-if="this.$store.state.inProjects" class="bottom-content">
     <button
       v-for="(project, idx) in this.$store.state.language.projectsInfo"
       :key="idx"

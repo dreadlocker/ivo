@@ -37,8 +37,8 @@ body {
   background-color: #242424;
 }
 .app {
-  // width: 1520px; // ORIGINAL, COMMENT ME WHEN DEVELOPING
-  width: 700px; // FOR DEV
+  width: 1520px; // ORIGINAL, COMMENT ME WHEN DEVELOPING
+  // width: 700px; // FOR DEV
   height: fit-content;
 }
 .app,
