@@ -1,9 +1,7 @@
 <template>
   <div class="app">
     <Logo />
-    <!-- <div class="content"> -->
     <router-view />
-    <!-- </div> -->
     <BottomContent />
     <Footer />
   </div>
@@ -39,15 +37,9 @@ body {
   background-color: #242424;
 }
 .app {
-  width: 1520px; // ORIGINAL, COMMENT ME WHEN DEVELOPING
-  // width: 700px; // FOR DEV
+  // width: 1520px; // ORIGINAL, COMMENT ME WHEN DEVELOPING
+  width: 700px; // FOR DEV
   height: fit-content;
-
-  // .content {
-  //   // width: inherit;
-  //   // height: 50%;
-  //   margin: $gutter 0;
-  // }
 }
 .app,
 button {

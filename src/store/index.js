@@ -16,7 +16,29 @@ const langEN = {
     about: ['FOR THE COMPANY'],
     projects: ['PROJECTS INFO'],
     contacts: ['CONTACTS INFO'],
-  }
+  },
+  projectsInfo: [
+    {
+      info1: 'info1',
+      info2: 'info2',
+      info3: 'info3',
+    },
+    {
+      info1: 'info4',
+      info2: 'info5',
+      info3: 'info6',
+    },
+    {
+      info1: 'info7',
+      info2: 'info8',
+      info3: 'info9',
+    },
+    {
+      info1: 'info10',
+      info2: 'info11',
+      info3: 'info12',
+    },
+  ]
 }
 const langBG = {
   filters: {
@@ -28,7 +50,29 @@ const langBG = {
     about: ['ЗА ФИРМАТА'],
     projects: ['ИНФОРМАЦИЯ ЗА ПРОЕКТИ'],
     contacts: ['ИНФОРМАЦИЯ ЗА КОНТАКТИ'],
-  }
+  },
+  projectsInfo: [
+    {
+      info1: 'инфо1',
+      info2: 'инфо2',
+      info3: 'инфо3',
+    },
+    {
+      info1: 'инфо4',
+      info2: 'инфо5',
+      info3: 'инфо6',
+    },
+    {
+      info1: 'инфо7',
+      info2: 'инфо8',
+      info3: 'инфо9',
+    },
+    {
+      info1: 'инфо10',
+      info2: 'инфо11',
+      info3: 'инфо12',
+    },
+  ]
 }
 const navbarNamesEn = ["about", "projects", "contacts",]
 const navbarNamesBG = ["за нас", "проекти", "контакти",]

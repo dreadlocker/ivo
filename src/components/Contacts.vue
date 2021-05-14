@@ -1,36 +1,33 @@
 <template>
-  <div class="d-flex">
-    <div class="info main-bg-color">
+  <MiddleContentHolder>
+    <template v-slot:middleContent>
       <div
-        v-for="item in this.$store.state.language.pageInfo.contacts"
+        v-for="item in $store.state.language.pageInfo.contacts"
         :key="item"
         class="main-text-color"
       >
         {{ item }}
       </div>
-    </div>
-    <h1>Contacts</h1>
-  </div>
+    </template>
+    <template v-slot:rightContent>
+      <h1>Contacts</h1>
+    </template>
+  </MiddleContentHolder>
 </template>
 
 <script>
+import MiddleContentHolder from "./MiddleContentHolder";
+
 export default {
   name: "Contacts",
-  // data() {
-  //   return {};
-  // },
+  components: {
+    MiddleContentHolder,
+  },
+  data() {
+    return {};
+  },
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/globalVars.scss";
-
-.d-flex {
-  height: $nav-height;
-  h1 {
-    width: $content-right-width;
-    background-color: gray;
-    margin: 0;
-  }
-}
 </style>
