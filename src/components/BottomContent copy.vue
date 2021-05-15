@@ -63,8 +63,7 @@ $popup-padding: 5%;
       height: $popup-1-height;
       border: 1px solid blue;
       position: absolute;
-      bottom: calc(#{-$button-1-width} + #{-$popup-padding * 2});
-      // bottom: calc((100% - #{$popup-1-height} - #{$popup-padding}) / 2);
+      bottom: calc((100% - #{$popup-1-height} - #{$popup-padding}) / 2);
       left: $popup-left;
       opacity: 0;
       padding: $popup-padding;
@@ -119,16 +118,6 @@ $popup-padding: 5%;
         left: calc(#{-$popup-left} - #{$popup-padding * 2} - 5%);
       }
     }
-  }
-}
-@media (max-width: 1024px) {
-  .popup {
-    font-size: 2vw;
-  }
-}
-@media (min-width: 1024px) {
-  .popup {
-    font-size: 1.5vw;
   }
 }
 </style>

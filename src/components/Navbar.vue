@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <div class="tabs-holder d-flex">
+    <div class="tabs-holder d-flex jc-sb">
       <div
         v-for="(tab, index) in this.$store.state.navbar"
         @click="changeActivetab(index)"
@@ -39,19 +39,20 @@ export default {
 $number-of-tabs: 3;
 // $tab-height: calc(100% / #{$number-of-tabs});
 $tab-height: 169px;
-$padding: 20px;
+$padding: 5%;
 
 .navbar {
   width: $navbar-width;
-  height: $nav-height;
+  height: 100%;
   margin-right: $gutter;
   .tabs-holder {
-    // width: 100%;
-    // height: 100%;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     .tab-holder {
-      // width: 100%;
-      height: $tab-height;
+      width: 100%;
+      //  - ((#{($gutter) * ($number-of-tabs - 1)})
+      height: calc(100% / #{$number-of-tabs});
       margin-bottom: $gutter;
       &:last-child {
         margin-bottom: 0;
@@ -59,15 +60,21 @@ $padding: 20px;
       .link {
         width: calc(100% - #{$padding});
         height: calc(100% - #{$padding});
-        font-size: 33px;
         padding: $padding 0 0 $padding;
+        font-size: 4vw;
         text-decoration: none;
         &:hover {
           transform: scale(1.05);
         }
-        transition: all 0.3s;
+        transition: transform 0.3s;
       }
     }
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar > .tabs-holder > .tab-holder > .link {
+    font-size: 2vw;
   }
 }
 </style>

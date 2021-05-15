@@ -1,5 +1,5 @@
 <template>
-  <div class="footer d-flex jc-sb">
+  <div class="footer d-flex jc-sb ai-c">
     <div v-if="!this.$store.state.inProjects"></div>
     <div v-else>
       <span class="filter main-text-color">
@@ -71,15 +71,30 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/globalVars.scss";
+
+$font-size: 2vw;
+$font-size-max: 1vw;
+
 .footer {
-  margin: 5px 0 100px 0;
-  font-size: 15px;
+  width: 100%;
+  height: $footer-height;
+  font-size: $font-size;
   button {
-    font-size: 15px;
+    font-size: $font-size;
     border: none;
     background-color: transparent;
     cursor: pointer;
     padding: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer {
+    font-size: $font-size-max;
+    button {
+      font-size: $font-size-max;
+    }
   }
 }
 </style>

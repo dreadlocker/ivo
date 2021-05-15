@@ -1,4 +1,11 @@
-$gutter: 12px;
-$nav-height: 531px;
-$navbar-width: 274px;
-$content-right-width: 946px;
+$gutter: 10px;
+$navbar-width: calc(20%);
+$middle-content-width: calc(100% - #{$navbar-width} - #{$gutter});
+$content-left-width: 25%;
+$content-right-width: calc(100% - #{$content-left-width} - #{$gutter});
+$content-width: 80%;
+$projects-img-height: 25%;
+$nav-height: 20%;
+$logo-height: 10%;
+$footer-height: 5%;
+$content-height: calc(100% - #{$logo-height} - #{$footer-height});

@@ -18,7 +18,7 @@ const langEN = {
     contacts: ['CONTACTS INFO'],
   },
   projectsInfo: [
-    'info1',
+    'info1info1info1',
     'info2',
     'info3',
     'info4',
@@ -36,7 +36,7 @@ const langBG = {
     contacts: ['ИНФОРМАЦИЯ ЗА КОНТАКТИ'],
   },
   projectsInfo: [
-    'инфо1',
+    'инфо1инфо1инфо1',
     'инфо2',
     'инфо3',
     'инфо4',

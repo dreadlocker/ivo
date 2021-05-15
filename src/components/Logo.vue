@@ -33,10 +33,12 @@ export default {
 
 .logo-holder {
   width: $navbar-width;
-  height: 100px;
+  height: 10%;
   .logo {
     width: 100%;
-    height: 40px;
+    height: 100%;
+    // width: 100%;
+    // height: 40px;
     cursor: pointer;
     background: url("../assets/logo.png") no-repeat;
   }
