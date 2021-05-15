@@ -39,12 +39,18 @@ body {
 }
 .app {
   width: 95%;
-  max-width: 1520px;
   height: 98%;
 }
 .app,
 button {
   font-family: Calibri;
   // "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif
+}
+
+@media (min-width: 1025px) {
+  .app {
+    width: 70%;
+    height: 78%;
+  }
 }
 </style>

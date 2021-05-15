@@ -95,6 +95,10 @@ $popup-padding: 5%;
       // height: $button-1-width;
       top: 40%;
       left: 90%;
+      font-size: 2vw;
+      .popup {
+        left: calc(#{-$popup-left} - 47%);
+      }
     }
   }
   img {
@@ -103,31 +107,13 @@ $popup-padding: 5%;
   }
 }
 
-@media (max-width: 400px) {
-  button {
-    &:last-of-type {
-      .popup {
-        left: calc(#{-$popup-left} - 47%);
-      }
-    }
+@media (min-width: 401px) {
+  .bottom-content > button:last-of-type > .popup {
+    left: calc(#{-$popup-left} - #{$popup-padding * 2} - 5%);
   }
 }
-@media (min-width: 400px) {
-  button {
-    &:last-of-type {
-      .popup {
-        left: calc(#{-$popup-left} - #{$popup-padding * 2} - 5%);
-      }
-    }
-  }
-}
-@media (max-width: 1024px) {
-  .popup {
-    font-size: 2vw;
-  }
-}
-@media (min-width: 1024px) {
-  .popup {
+@media (min-width: 1025px) {
+  .bottom-content > button:last-of-type > .popup {
     font-size: 1.5vw;
   }
 }
