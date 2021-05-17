@@ -32,7 +32,7 @@ export default {
 $upper-content-height: 80%;
 
 .top-content {
-  width: 100%;
+  width: 97%;
   height: $content-height;
   flex-direction: column;
   .nav-content-holder {

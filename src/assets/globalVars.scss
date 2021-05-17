@@ -9,3 +9,4 @@ $nav-height: 20%;
 $logo-height: 10%;
 $footer-height: 5%;
 $content-height: calc(100% - #{$logo-height} - #{$footer-height});
+$transition-delay: '0.3s';

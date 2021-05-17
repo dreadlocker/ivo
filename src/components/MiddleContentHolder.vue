@@ -26,12 +26,13 @@ export default {
     font-size: 2.5vw;
     margin-right: $gutter;
   }
-  h1 {
+  .right-content {
     width: $content-right-width;
     height: inherit;
     background-color: gray;
     font-size: 4.5vw;
     margin: 0;
+    overflow: hidden;
   }
 }
 
@@ -39,9 +40,6 @@ export default {
   .d-flex {
     .info {
       font-size: 1.5vw;
-    }
-    h1 {
-      font-size: 2.5vw;
     }
   }
 }

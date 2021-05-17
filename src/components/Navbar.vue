@@ -66,7 +66,7 @@ $padding: 5%;
         &:hover {
           transform: scale(1.05);
         }
-        transition: transform 0.3s;
+        transition: transform #{$transition-delay};
       }
     }
   }

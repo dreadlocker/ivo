@@ -40,7 +40,7 @@ export default {
     // width: 100%;
     // height: 40px;
     cursor: pointer;
-    background: url("../assets/logo.png") no-repeat;
+    background: url("../assets/images/logo.png") no-repeat;
   }
   .logo-animation {
     animation: changeImages 1s forwards 1s;
@@ -49,13 +49,13 @@ export default {
 
 @keyframes changeImages {
   0% {
-    background: url("../assets/logo.png") no-repeat;
+    background: url("../assets/images/logo.png") no-repeat;
   }
   50% {
-    background: url("../assets/logo1.png") no-repeat;
+    background: url("../assets/images/logo1.png") no-repeat;
   }
   100% {
-    background: url("../assets/logo2.png") no-repeat;
+    background: url("../assets/images/logo2.png") no-repeat;
   }
 }
 </style>

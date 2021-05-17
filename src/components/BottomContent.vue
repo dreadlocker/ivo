@@ -2,7 +2,7 @@
   <div class="bottom-content">
     <img
       v-if="this.$store.state.inProjects"
-      src="@/assets/42-space-scrolling-background850-2.jpg"
+      src="@/assets/images/42-space-scrolling-background850-2.jpg"
       alt="projects"
     />
     <template v-if="this.$store.state.inProjects">
@@ -70,7 +70,7 @@ $popup-padding: 5%;
       padding: $popup-padding;
       border-radius: 5px;
       pointer-events: none;
-      transition: opacity 0.3s linear;
+      transition: opacity #{$transition-delay} linear;
     }
     &:first-of-type {
       // width: $button-1-height;
