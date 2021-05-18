@@ -38,7 +38,7 @@ body {
   background-color: #242424;
 }
 .app {
-  width: 77%;
+  width: 75%;
   height: 93%;
 }
 .app,
