@@ -22,13 +22,13 @@ export default {
 .d-flex {
   .info {
     width: $content-left-width;
-    height: inherit;
+    height: 100%;
     font-size: 2.5vw;
     margin-right: $gutter;
   }
   .right-content {
     width: $content-right-width;
-    height: inherit;
+    height: 100%;
     background-color: gray;
     font-size: 4.5vw;
     margin: 0;

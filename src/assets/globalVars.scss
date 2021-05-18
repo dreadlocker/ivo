@@ -6,7 +6,7 @@ $content-right-width: calc(100% - #{$content-left-width} - #{$gutter});
 $content-width: 80%;
 $projects-img-height: 25%;
 $nav-height: 20%;
-$logo-height: 10%;
+$logo-height: 2vw;
 $footer-height: 5%;
 $content-height: calc(100% - #{$logo-height} - #{$footer-height});
 $transition-delay: '0.3s';

@@ -1,8 +1,13 @@
 <template>
   <div class="app">
-    <Logo />
-    <router-view />
-    <Footer />
+    <div class="content-portrait-mode jc-c ai-c">
+      <Logo />
+    </div>
+    <div class="content-landscape-mode">
+      <Logo />
+      <router-view />
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -17,6 +22,9 @@ export default {
     Footer,
   },
   data: () => ({}),
+  mounted() {
+    this.$store.commit("rerunLogoAnimation");
+  },
 };
 </script>
 
@@ -40,6 +48,19 @@ body {
 .app {
   width: 75%;
   height: 93%;
+  .content-portrait-mode {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .content-landscape-mode {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 }
 .app,
 button {
@@ -51,6 +72,20 @@ button {
   .app {
     width: 70%;
     height: 67%;
+  }
+}
+@media (max-width: 567px) {
+  .app {
+    .content-landscape-mode {
+      display: none;
+    }
+    .content-portrait-mode {
+      display: flex;
+    }
+    .logo-holder {
+      width: 80%;
+      height: 11vw;
+    }
   }
 }
 </style>

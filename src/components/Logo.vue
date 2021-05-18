@@ -33,14 +33,12 @@ export default {
 
 .logo-holder {
   width: $navbar-width;
-  height: 10%;
+  height: $logo-height;
   .logo {
     width: 100%;
     height: 100%;
-    // width: 100%;
-    // height: 40px;
+    background: url("../assets/images/logo.svg") no-repeat;
     cursor: pointer;
-    background: url("../assets/images/logo.png") no-repeat;
   }
   .logo-animation {
     animation: changeImages 1s forwards 1s;
@@ -49,13 +47,13 @@ export default {
 
 @keyframes changeImages {
   0% {
-    background: url("../assets/images/logo.png") no-repeat;
+    background: url("../assets/images/logo.svg") no-repeat;
   }
   50% {
-    background: url("../assets/images/logo1.png") no-repeat;
+    background: url("../assets/images/logo1.svg") no-repeat;
   }
   100% {
-    background: url("../assets/images/logo2.png") no-repeat;
+    background: url("../assets/images/logo2.svg") no-repeat;
   }
 }
 </style>
