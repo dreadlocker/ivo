@@ -61,7 +61,7 @@ $padding: 5%;
         width: calc(100% - #{$padding});
         height: calc(100% - #{$padding});
         padding: $padding 0 0 $padding;
-        font-size: 4vw;
+        font-size: 3vw;
         text-decoration: none;
         &:hover {
           transform: scale(1.05);

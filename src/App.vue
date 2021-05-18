@@ -38,8 +38,8 @@ body {
   background-color: #242424;
 }
 .app {
-  width: 95%;
-  height: 98%;
+  width: 77%;
+  height: 93%;
 }
 .app,
 button {
@@ -47,10 +47,10 @@ button {
   // "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif
 }
 
-@media (min-width: 1025px) {
+@media (max-aspect-ratio: 16/9) {
   .app {
     width: 70%;
-    height: 78%;
+    height: 67%;
   }
 }
 </style>
