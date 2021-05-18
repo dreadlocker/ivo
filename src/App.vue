@@ -55,6 +55,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    .logo {
+      transform: rotate(90deg);
+    }
   }
   .content-landscape-mode {
     width: 100%;
