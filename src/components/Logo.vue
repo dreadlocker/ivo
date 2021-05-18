@@ -39,6 +39,7 @@ export default {
     height: 100%;
     background: url("../assets/images/logo.svg") no-repeat;
     cursor: pointer;
+    transform: rotate(90deg);
   }
   .logo-animation {
     animation: changeImages 1s forwards 1s;
