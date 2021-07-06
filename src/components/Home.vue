@@ -1,5 +1,5 @@
 <template>
-  <div class="top-content d-flex jc-sb">
+  <div class="top-content d-flex">
     <div class="nav-content-holder d-flex jc-sb">
       <Navbar />
       <router-view class="middle-content" />
@@ -20,16 +20,11 @@ export default {
     Navbar,
     BottomContent,
   },
-  // data() {
-  //   return {};
-  // },
 };
 </script>
 
 <style scoped lang="scss">
 @import "@/assets/globalVars.scss";
-
-$upper-content-height: 80%;
 
 .top-content {
   width: 100%;
@@ -37,8 +32,8 @@ $upper-content-height: 80%;
   flex-direction: column;
   .nav-content-holder {
     width: 100%;
-    height: $upper-content-height;
-    margin: $gutter 0;
+    height: $content-top-height;
+    margin-bottom: $gutter;
     .middle-content {
       width: $middle-content-width;
       height: 100%;
@@ -46,7 +41,7 @@ $upper-content-height: 80%;
   }
   .projects-img-holder {
     width: 100%;
-    height: calc(100% - #{$upper-content-height});
+    height: $content-bottom-height;
   }
 }
 </style>

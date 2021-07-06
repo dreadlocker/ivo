@@ -80,6 +80,7 @@ $font-size-max: 1vw;
   width: 100%;
   height: $footer-height;
   font-size: $font-size;
+  margin-top: 0.329%;
   button {
     font-size: $font-size;
     border: none;

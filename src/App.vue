@@ -1,9 +1,9 @@
 <template>
   <div class="app">
-    <div class="content-portrait-mode jc-c ai-c">
+    <div v-if="isPortraitMode" class="content-portrait-mode jc-c ai-c">
       <Logo />
     </div>
-    <div class="content-landscape-mode">
+    <div v-else class="content-landscape-mode">
       <Logo />
       <router-view />
       <Footer />
@@ -21,9 +21,37 @@ export default {
     Logo,
     Footer,
   },
-  data: () => ({}),
+  data() {
+    return {
+      isPortraitMode: true,
+      interval: null,
+    };
+  },
+  methods: {
+    goToHomePage() {
+      this.$store.commit("changeActivetab");
+      this.$store.commit("rerunLogoAnimation");
+      if (this.$route.fullPath !== "/") {
+        this.$router.push("/");
+      }
+    },
+    handleOrientationChange() {
+      const orientation = window.screen.orientation.type;
+      if (orientation === "portrait-primary") {
+        this.isPortraitMode = true;
+        this.interval = setTimeout(() => {
+          this.isPortraitMode = false;
+        }, 2500);
+      } else if (orientation === "landscape-primary") {
+        this.isPortraitMode = false;
+        clearInterval(this.interval);
+      }
+    },
+  },
   mounted() {
     this.$store.commit("rerunLogoAnimation");
+    window.addEventListener("orientationchange", this.handleOrientationChange);
+    this.handleOrientationChange();
   },
 };
 </script>
@@ -32,22 +60,30 @@ export default {
 @import "@/assets/globalClasses.scss";
 @import "@/assets/globalVars.scss";
 
-html,
-body {
+$margin-top: 2.396%;
+$margin-bottom: 6.563%;
+$margin-x: 10.417%;
+
+html {
   width: 100%;
   height: 100%;
-}
-body {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 0;
   background-color: #242424;
 }
 .app {
-  width: 75%;
-  height: 93%;
+  width: 79.167vw;
+  height: 47.292vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   .content-portrait-mode {
     width: 100%;
     height: 100%;
@@ -71,23 +107,30 @@ button {
   // "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif
 }
 
-@media (max-aspect-ratio: 16/9) {
-  .app {
-    width: 70%;
-    height: 67%;
-  }
-}
 @media (max-width: 567px) {
   .app {
-    .content-landscape-mode {
-      display: none;
-    }
     .content-portrait-mode {
       display: flex;
     }
     .logo-holder {
       width: 80%;
       height: 11vw;
+    }
+  }
+}
+@media (min-height: 280px) and (max-height: 280px) and (orientation: landscape) {
+  .app {
+    height: 39vw;
+    .img-holder > img {
+      height: 122% !important;
+    }
+  }
+}
+@media (min-height: 375px) and (max-height: 376px) and (orientation: landscape) {
+  .app {
+    height: 43vw;
+    .img-holder > img {
+      height: 110% !important;
     }
   }
 }

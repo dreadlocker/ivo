@@ -8,7 +8,6 @@ import {
 } from '@/assets/routesPath.js';
 
 // TODO: da smenq imeto na saita(tova koeto se vijda v tab na brayzura) - package.json => name
-// TODO: animaciqta na logoto da se restartira pri klik na vseki ot osnovnite tabove
 
 Vue.use(VueRouter)
 

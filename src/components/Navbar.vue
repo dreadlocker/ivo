@@ -37,7 +37,6 @@ export default {
 @import "@/assets/globalVars.scss";
 
 $number-of-tabs: 3;
-// $tab-height: calc(100% / #{$number-of-tabs});
 $tab-height: 169px;
 $padding: 5%;
 
@@ -51,7 +50,6 @@ $padding: 5%;
     flex-direction: column;
     .tab-holder {
       width: 100%;
-      //  - ((#{($gutter) * ($number-of-tabs - 1)})
       height: calc(100% / #{$number-of-tabs});
       margin-bottom: $gutter;
       &:last-child {

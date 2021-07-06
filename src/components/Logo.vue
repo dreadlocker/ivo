@@ -25,6 +25,9 @@ export default {
       }
     },
   },
+  mounted() {
+    window.addEventListener("orientationchange", this.handleOrientationChange);
+  },
 };
 </script>
 
@@ -33,14 +36,12 @@ export default {
 
 .logo-holder {
   width: $navbar-width;
-  height: $logo-height;
+  height: $header-height;
   .logo {
     width: 100%;
     height: 100%;
     background: url("../assets/images/logo.svg") no-repeat;
     cursor: pointer;
-  }
-  .rotate {
   }
   .logo-animation {
     animation: changeImages 1s forwards 1s;
