@@ -126,7 +126,9 @@ button {
     }
   }
 }
-@media (min-height: 375px) and (max-height: 376px) and (orientation: landscape) {
+// TODO: MOJE DA SLAGAM @media ZA RAZLI4NI aspect-ratio KATO TYK:
+@media (min-height: 375px) and (max-height: 376px) and (orientation: landscape),
+  (min-aspect-ratio: 16/9) {
   .app {
     height: 43vw;
     .img-holder > img {
