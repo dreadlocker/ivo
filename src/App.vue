@@ -36,15 +36,17 @@ export default {
       }
     },
     handleOrientationChange() {
-      const orientation = window.screen.orientation.type;
-      if (orientation === "portrait-primary") {
+      const isLandscapeMode =
+        window.screen.availWidth > window.screen.availHeight;
+
+      if (isLandscapeMode) {
+        this.isPortraitMode = false;
+        clearInterval(this.interval);
+      } else {
         this.isPortraitMode = true;
         this.interval = setTimeout(() => {
           this.isPortraitMode = false;
         }, 2500);
-      } else if (orientation === "landscape-primary") {
-        this.isPortraitMode = false;
-        clearInterval(this.interval);
       }
     },
   },
@@ -87,7 +89,6 @@ body {
   .content-portrait-mode {
     width: 100%;
     height: 100%;
-    display: none;
     position: absolute;
     top: 0;
     left: 0;

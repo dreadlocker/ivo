@@ -59,7 +59,7 @@ $padding: 5%;
         width: calc(100% - #{$padding});
         height: calc(100% - #{$padding});
         padding: $padding 0 0 $padding;
-        font-size: 3vw;
+        font-size: 2vw;
         text-decoration: none;
         &:hover {
           transform: scale(1.05);
@@ -67,12 +67,6 @@ $padding: 5%;
         transition: transform #{$transition-delay};
       }
     }
-  }
-}
-
-@media (min-width: 1025px) {
-  .navbar > .tabs-holder > .tab-holder > .link {
-    font-size: 2vw;
   }
 }
 </style>
